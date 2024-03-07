@@ -4,15 +4,13 @@ get_env_values = dict(dotenv_values('.env'))
 
 
 # env values 
-res_env = get_env_values["HERE_WE_GO"]
+HERE_WE_GO = get_env_values["HERE_WE_GO"]
 
 
 
 # SMTP commons 
-sender_email = 'profesornaoltena@gmail.com'
-smtp_server = 'smtp.gmail.com'
-smtp_port = 587
-smtp_username = 'profesornaoltena@gmail.com'
-
-# https://myaccount.google.com/apppasswords.
-smtp_password = 'lqqtyftdcvizlxox'  
+DEFAULT_FROM_EMAIL = 'profesornaoltena@gmail.com'
+HOST_SMTP_SERVER = 'smtp.gmail.com'
+HOST_SMTP_PORT = 587
+HOST_SMTP_USERNAME = 'profesornaoltena@gmail.com'
+HOST_SMTP_PASSWORD = 'lqqtyftdcvizlxox'  # https://myaccount.google.com/apppasswords.

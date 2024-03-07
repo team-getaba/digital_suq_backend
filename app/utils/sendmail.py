@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from ..templates.email_templates.emailtemaples import Template
-from ..common.common import sender_email, smtp_username, smtp_server, smtp_password, smtp_port
+from ..common.common import DEFAULT_FROM_EMAIL, HOST_SMTP_USERNAME, HOST_SMTP_SERVER, HOST_SMTP_PASSWORD, HOST_SMTP_PORT
 
 
 def email_type(subject, msg):
@@ -17,7 +17,7 @@ class Email:
         # HTML content
         # Create the email message
         email_message = MIMEMultipart()
-        email_message['From'] = sender_email
+        email_message['From'] = DEFAULT_FROM_EMAIL
         email_message['To'] = receiver_email
         email_message['Subject'] = subject
 
@@ -27,13 +27,13 @@ class Email:
 
         try:
             # Create an SMTP connection
-            smtp_connection = smtplib.SMTP(smtp_server, smtp_port)
+            smtp_connection = smtplib.SMTP(HOST_SMTP_SERVER, HOST_SMTP_PORT)
             smtp_connection.starttls()
-            smtp_connection.login(smtp_username, smtp_password)
+            smtp_connection.login(HOST_SMTP_USERNAME, HOST_SMTP_PASSWORD)
 
             # Send the email
             smtp_connection.sendmail(
-                sender_email, receiver_email, email_message.as_string())
+                DEFAULT_FROM_EMAIL, receiver_email, email_message.as_string())
 
             print("Email sent successfully!")
             return True
