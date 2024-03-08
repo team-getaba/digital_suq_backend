@@ -34,7 +34,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
         # )
         return {'msg': 'Incorrect phone number or password'}
     access_token = Token.create_access_token(data={"sub": user.phone})
-    return {"access_token": access_token, "token_type": "bearer", "phone_verified": user.verified, "role": user.role, "user_id": user.id}
+    return {"access_token": access_token, "token_type": "bearer", "phone_verified": user.verified, "role": user.role, "user_id": user.id, 'fname': user.firstName, 'lname': user.lastName}
 
 
 
@@ -64,7 +64,7 @@ async def signup(
         db.commit()
         db.refresh(signupdata)
         access_token = Token.create_access_token(data={"sub": signupdata.phone})
-        return {"access_token": access_token, "token_type": "bearer", "phone_verified": False, "role": user.role}
+        return {"access_token": access_token, "token_type": "bearer", "phone_verified": False, "role": user.role, 'fname': user.firstName, 'lname': user.lastName}
     return {'detail': 'phone number already exists'}
 
 

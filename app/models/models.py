@@ -66,8 +66,10 @@ class BaleSuqOffer(Base):
     date = Column(DateTime(timezone=True), server_default=func.now())
     poster_id = Column(String)
     post_id = Column(String)
+    location = Column(String)
     price = Column(String)
     offerer_id = Column(String)
+    offerer_name = Column(String)
     details = Column(String)
 
 

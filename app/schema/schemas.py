@@ -54,7 +54,9 @@ class DembeghaPostSchema(BaseModel):
 class BaleSuqOfferSchma(BaseModel):
     poster_id: str
     post_id: str
+    location: str
     details: str
+    offerer_name: str
     price: str
     offerer_id: str
     
