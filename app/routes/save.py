@@ -94,24 +94,22 @@ market_categories = [
     "Home and Garden",
     "Health and Beauty",
     "Toys and Games",
-    "Sports and Outdoors",
     "Books and Magazines",
     "Food and Grocery",
+    "Sports and Outdoors",
     "Automotive",
-    "Pet Supplies"
 ]
 
 image_urls = [
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fbridgeways.org%2Fwp-content%2Fuploads%2F2023%2F01%2FThe-Advantages-of-Outsourcing-Electronics-Assembly-to-Contract-Manufacturers.jpg&tbnid=Rs5d2Fq6pc_lYM&vet=12ahUKEwirg7-siuSEAxWNU6QEHXcWASEQMygTegUIARCYAQ..i&imgrefurl=https%3A%2F%2Fbridgeways.org%2Foutsourcing-your-electronics-manufacturing%2F&docid=aR8pOIuqY_SpeM&w=1280&h=720&q=electronics&ved=2ahUKEwirg7-siuSEAxWNU6QEHXcWASEQMygTegUIARCYAQ",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcontent.ngv.vic.gov.au%2Fcol-images%2Fapi%2FFb108875%2F1920&tbnid=2D1AbF2WLeXpIM&vet=12ahUKEwiYxarliuSEAxVPVaQEHYLVDyQQMygZegUIARCoAQ..i&imgrefurl=https%3A%2F%2Fwww.ngv.vic.gov.au%2Fexplore%2Fcollection%2Ffashion-textiles%2F&docid=zvBXycq9JyJ1pM&w=1920&h=1455&q=Fashion&ved=2ahUKEwiYxarliuSEAxVPVaQEHYLVDyQQMygZegUIARCoAQ",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Ftownsquare.media%2Fsite%2F692%2Ffiles%2F2019%2F03%2FGettyImages-9201114321.jpg%3Fw%3D980%26q%3D75&tbnid=-vs_052-kI_JGM&vet=12ahUKEwjUqJ_0iuSEAxX9WaQEHW01AEEQMyg3egUIARDvAQ..i&imgrefurl=https%3A%2F%2Fwjimam.com%2Flansing-home-garden-show-this-weekend%2F&docid=JyDzOBYF0EETXM&w=980&h=651&q=Home%20and%20Garden&ved=2ahUKEwjUqJ_0iuSEAxX9WaQEHW01AEEQMyg3egUIARDvAQ",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthepointsguy.global.ssl.fastly.net%2Fus%2Foriginals%2F2022%2F09%2FCosmetics-and-beauty-rpoduct-flat-lay_Iryna-Veklich.jpg&tbnid=AgVX2Z_9UPab1M&vet=12ahUKEwiqxs2Ni-SEAxUVlycCHRJUD6oQMygMegUIARCIAQ..i&imgrefurl=https%3A%2F%2Fthepointsguy.com%2Fguide%2Ftsa-approved-health-and-beauty%2F&docid=-F5ebPVbGqtIwM&w=1600&h=1067&q=Health%20and%20Beauty&ved=2ahUKEwiqxs2Ni-SEAxUVlycCHRJUD6oQMygMegUIARCIAQ",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0037%2F8008%2F3782%2Ffiles%2FToys_Banner_3_1024x1024.png%3Fv%3D1689290982&tbnid=zyt-jRp30W57vM&vet=12ahUKEwijk76ii-SEAxV8daQEHd-7CYMQMyg0egUIARDlAQ..i&imgrefurl=https%3A%2F%2Fartofthemovies.co.uk%2Fblogs%2Foriginal-movie-posters%2Ftoy-stories-toys-and-games-in-movies&docid=Mo8ldrKw2T19dM&w=1024&h=513&q=Toys%20and%20Games&ved=2ahUKEwijk76ii-SEAxV8daQEHd-7CYMQMyg0egUIARDlAQ",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fsportstarsmag.com%2Fwp-content%2Fuploads%2F2019%2F04%2Fround-2086759_640.jpg&tbnid=gKgUqc26ixHTqM&vet=12ahUKEwi7o9S9i-SEAxWJlycCHVoTC44QMygDegQIARBP..i&imgrefurl=https%3A%2F%2Fsportstarsmag.com%2F2019%2F04%2F3-best-outdoor-sports-for-beginners&docid=Bbx_6FFjNPEexM&w=600&h=398&q=Sports%20and%20Outdoors&ved=2ahUKEwi7o9S9i-SEAxWJlycCHVoTC44QMygDegQIARBP",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Flive.cdn.renderosity.com%2Fmarketplace%2Fproducts%2F99797%2Ffull_e5ca8d7c6b6da5356e973f21c67b1f59.jpg&tbnid=Ee5ihPX85ztgrM&vet=12ahUKEwi-9O7Ni-SEAxU3TKQEHbzHBdsQMygIegQIARBc..i&imgrefurl=https%3A%2F%2Fwww.renderosity.com%2Fmarketplace%2Fproducts%2F99797%2Fbooks-and-magazines&docid=hNFBA3VoMW6A1M&w=711&h=400&q=Books%20and%20Magazines&ved=2ahUKEwi-9O7Ni-SEAxU3TKQEHbzHBdsQMygIegQIARBc",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fs3.amazonaws.com%2Fsecretsaucefiles%2Fphotos%2Fimages%2F000%2F109%2F800%2Flarge%2Fe-grocery-amazon-hed-2013.jpg%3F1485376278&tbnid=NI70lE6xnHUT3M&vet=12ahUKEwi4r8jii-SEAxUvQKQEHfpVA3QQMygEegQIARB7..i&imgrefurl=https%3A%2F%2Fspoonuniversity.com%2Flifestyle%2Fgrocery-store-delivery-options&docid=gc90oGqVluUIHM&w=652&h=367&q=food%20and%20grocery&ved=2ahUKEwi4r8jii-SEAxUvQKQEHfpVA3QQMygEegQIARB7",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.electronicspecifier.com%2Fcms%2Fimages%2Finline-2018-03%2Fwiresconnecting1.jpg&tbnid=iI-iffSJ1NELqM&vet=10CHwQMyigAWoXChMI6IKQ8ovkhAMVAAAAAB0AAAAAEAM..i&imgrefurl=https%3A%2F%2Fwww.electronicspecifier.com%2Fnews%2Fanalysis%2Fautomotive-servicing-in-the-era-of-the-electronic-car&docid=V_1eNpK3wIFa_M&w=800&h=503&q=Automotive&ved=0CHwQMyigAWoXChMI6IKQ8ovkhAMVAAAAAB0AAAAAEAM",
-    "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.retailmba.com%2Fwp-content%2Fuploads%2F2023%2F11%2Fwholesale-pet-products.jpeg&tbnid=V3UjEJxu4isLIM&vet=12ahUKEwiH-fShjOSEAxXalScCHQsYANYQMygDegQIARB4..i&imgrefurl=https%3A%2F%2Fwww.retailmba.com%2Fwholesale-pet-supplies%2F&docid=Ahnb3kypMLak2M&w=1000&h=667&q=Pet%20Supplies&ved=2ahUKEwiH-fShjOSEAxXalScCHQsYANYQMygDegQIARB4"
+    "https://www.electronicspecifier.com/cms/images/inline-2018-03/wiresconnecting1.jpg",
+    "https://img.freepik.com/free-photo/black-woman-trendy-grey-leather-jacket-posing-beige-background-studio-winter-autumn-fashion-look_273443-141.jpg",
+    "https://c1.wallpaperflare.com/preview/152/978/370/garden-flowers-home-garden-shed.jpg",
+    "https://thepointsguy.global.ssl.fastly.net/us/originals/2022/09/Cosmetics-and-beauty-rpoduct-flat-lay_Iryna-Veklich.jpg",
+    "https://media.istockphoto.com/id/687165852/photo/toys.webp?b=1&s=170667a&w=0&k=20&c=aECJBVRGL3jNtrbiHOTMq1-5rSv3xeNUpZywEZYwvX4=",
+    "https://img.freepik.com/free-photo/creative-composition-world-book-day_23-2148883765.jpg?size=626&ext=jpg&ga=GA1.1.1395880969.1709769600&semt=sph",
+    "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://c4.wallpaperflare.com/wallpaper/176/1013/227/running-sports-shoes-outdoor-activities-wallpaper-preview.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc8G6jnjll-aZ2prUZimjNetaonanodJQ8hQ&usqp=CAU",
 ]
 
 
