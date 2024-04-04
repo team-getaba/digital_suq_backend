@@ -1,5 +1,5 @@
 __pycache__
-env
+/env
 command_helper.txt
 .env
 geberekoo.sqlite
