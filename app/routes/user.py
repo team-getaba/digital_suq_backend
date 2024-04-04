@@ -18,6 +18,12 @@ router = APIRouter(
 async def get_currunt_user(current_user = Depends(get_current_active_user)):
     return current_user
 
+@router.get("/all")
+async def get_all_user(db: Session = Depends(get_db)):
+    get_all = db.query(User)
+    db_result = get_all.all()
+    return db_result
+
 dummy_code_list = [1423, 2456, 6789, 1498, 1164, 7234]
 
 def phone_verified(phone):

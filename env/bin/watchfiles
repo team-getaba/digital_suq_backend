@@ -1,0 +1,8 @@
+#!/media/naol/4fdfd854-d500-4abe-abc2-79e37982b224/mint/coding/project/team/balesuq/digital_suq_backend/env/bin/python3.11
+# -*- coding: utf-8 -*-
+import re
+import sys
+from watchfiles.cli import cli
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(cli())

@@ -23,7 +23,7 @@ router = APIRouter(
 
 
 @router.post('/post')
-async def save_plant(plant: DembeghaPostSchema, current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
+async def post_all(plant: DembeghaPostSchema, current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
     plantdata = DembeghaPost(**jsonable_encoder(plant))
     plantdata.user_id = current_user.id
     db.add(plantdata)
@@ -32,7 +32,7 @@ async def save_plant(plant: DembeghaPostSchema, current_user = Depends(get_curre
     return plantdata
 
 @router.get('/post/me')
-async def save_plant(current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
+async def get_my_post(current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
     get_user_data = db.query(DembeghaPost)
     db_result = get_user_data.filter(DembeghaPost.user_id == current_user.id).all()
     return db_result
@@ -64,7 +64,7 @@ async def get_catagory(db: Session = Depends(get_db)):
 
 
 @router.post('/offer')
-async def save_plant(plant: BaleSuqOfferSchma, current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
+async def get_offers(plant: BaleSuqOfferSchma, current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
     plantdata = BaleSuqOffer(**jsonable_encoder(plant))
     plantdata.offerer_id = current_user.id
     # plantdata.offerer_name = "current_user.firstName + ' ' + current_user.lastName" 
@@ -79,6 +79,14 @@ async def get_catagory(post_id, db: Session = Depends(get_db)):
     get_user_data = db.query(BaleSuqOffer)
     db_result = get_user_data.filter(BaleSuqOffer.post_id == post_id).all()
     return db_result
+
+
+@router.get("/offer/mine")
+async def get_offers_mine(current_user = Depends(get_current_active_user), db: Session = Depends(get_db)):
+    get_user_data = db.query(BaleSuqOffer)
+    db_result = get_user_data.filter(BaleSuqOffer.offerer_id == current_user.id).all()
+    return db_result
+
 
 
 @router.get("/chat/{chat_id}")
@@ -101,7 +109,7 @@ market_categories = [
 ]
 
 image_urls = [
-    "https://www.electronicspecifier.com/cms/images/inline-2018-03/wiresconnecting1.jpg",
+    "https://www.pngitem.com/pimgs/m/520-5208848_samsung-min-electronics-hd-png-download.png",
     "https://img.freepik.com/free-photo/black-woman-trendy-grey-leather-jacket-posing-beige-background-studio-winter-autumn-fashion-look_273443-141.jpg",
     "https://c1.wallpaperflare.com/preview/152/978/370/garden-flowers-home-garden-shed.jpg",
     "https://thepointsguy.global.ssl.fastly.net/us/originals/2022/09/Cosmetics-and-beauty-rpoduct-flat-lay_Iryna-Veklich.jpg",
